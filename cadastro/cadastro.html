@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./cadastro.css">
+</head>
+
+<body>
+  <div class="register-container">
+    <h1>Nome completo</h1>
+    <div class="input-group">
+      <input type="text" id="fullName" placeholder="José Maria dos Santos">
+    </div>
+
+    <h1>Email</h1>
+    <div class="input-group">
+      <input type="email" id="email" placeholder="josemaria@gmail.com">
+    </div>
+
+    <h1>Nome de usuário</h1>
+    <div class="input-group">
+      <input type="text" id="username" placeholder="@josemaria">
+      <div id="usernameStatus" class="status available">disponível</div>
+    </div>
+
+    <h1>Criar senha</h1>
+    <div class="input-group">
+      <input type="password" id="password" placeholder="********">
+      <div id="passwordStrength" class="status"></div>
+    </div>
+
+    <h1>Confirmar senha</h1>
+    <div class="input-group">
+      <input type="password" id="confirmPassword" placeholder="********">
+      <div id="passwordMatch" class="status password-match">as senhas são iguais</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <button class="register-btn" id="registerBtn">Cadastrar</button>
+
+    <div class="login-link">
+      Já tem uma conta? <a href="login.html">Possuo cadastro</a>
+    </div>
+  </div>
+  <script src="./cadastro.js"></script>
+</body>
+
+</html>

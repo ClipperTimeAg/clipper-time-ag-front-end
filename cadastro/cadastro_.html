@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="main_login">
+        <div class="teste">
+
+            <div class="left_login">
+                <img class="left_img" src="../img/logo.webp" alt="logo">
+            </div>
+
+            <div class="right_login">
+                <div class="card_login">
+                    <h1>Cadastro</h1>
+                    <div class="textfild">
+                        <label for="usuário">Nome Completo</label>
+                        <input type="text" name="usuario" id="fullName" placeholder="Usuário">
+                    </div>
+                    <div class="textfild">
+                        <label for="usuário">Email</label>
+                        <input type="text" name="usuario" id="email" placeholder="Usuário">
+                    </div>
+                    <div class="textfild">
+                        <label for="usuário">Nome de Usuário</label>
+                        <input type="text" name="usuario" id="username" placeholder="Usuário">
+                        <div id="usernameStatus" class="status available"></div>
+                    </div>
+                    <div class="textfild">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="password" placeholder="Senha">
+                        <div id="passwordStrength" class="status"></div>
+                    </div>
+                    <div class="textfild">
+                        <label for="senha">Confirmar Senha</label>
+                        <input type="password" name="senha"  id="confirmPassword" placeholder="Senha">
+                        <div id="passwordMatch" class="status password-match"></div>
+                    </div>
+                    <button class="btn_cadastro" id="registerBtn">Cadastrar</button>
+                    
+                      <div class="links">
+                        Já tem uma conta? <a href="login.html">Possuo cadastro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./cadastro.js"></script>
+</body>
+</html>
