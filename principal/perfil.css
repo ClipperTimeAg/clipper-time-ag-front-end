@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px 50px 10px 50px;
+  }
+.logo {
+  font-weight: bold;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px 20px 20px 20px;
+}
+
+.entrar {
+  background-color: #1c1c1c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: flex;
+  padding: 20px;
+}
+
+.ads-space {
+  width: 200px;
+}
+
+.main-content {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.user-info .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #3498db;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #dcdcdc;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #3498db;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  max-width: 280px;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card span {
+  font-weight: bold;
+}
+
+.card p {
+  margin: 0;
+  font-size: 12px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
