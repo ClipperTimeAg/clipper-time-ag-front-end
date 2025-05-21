@@ -3,46 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="stylesheet" href="cadastro.css">
     <title>Cadastro</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    <div class="main_login">
-        <div class="teste">
-
-            <div class="left_login">
+    <div class="main_cadastro">
+        <div class="container">
+            <div class="left_cadastro">
+                <h1>Faça seu Cadastro</h1>
                 <img class="left_img" src="../img/logo.webp" alt="logo">
             </div>
 
-            <div class="right_login">
-                <div class="card_login">
+            <div class="right_cadastro">
+                <div class="card_cadastro">
                     <h1>Cadastro</h1>
                     <div class="textfild">
-                        <label for="usuário">Nome Completo</label>
-                        <input type="text" name="usuario" id="fullName" placeholder="Usuário">
+                        <label for="fullName">Nome Completo</label>
+                        <input type="text" name="usuario" id="fullName" placeholder="Digite seu nome completo">
                     </div>
                     <div class="textfild">
-                        <label for="usuário">Email</label>
-                        <input type="text" name="usuario" id="email" placeholder="Usuário">
+                        <label for="email">Email</label>
+                        <input type="text" name="usuario" id="email" placeholder="Digite seu email">
                     </div>
                     <div class="textfild">
-                        <label for="usuário">Nome de Usuário</label>
-                        <input type="text" name="usuario" id="username" placeholder="Usuário">
+                        <label for="username">Nome de Usuário</label>
+                        <input type="text" name="usuario" id="username" placeholder="Comece com @">
                         <div id="usernameStatus" class="status available"></div>
                     </div>
                     <div class="textfild">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="password" placeholder="Senha">
+                        <label for="password">Senha</label>
+                        <input type="password" name="senha" id="password" placeholder="Crie uma senha">
                         <div id="passwordStrength" class="status"></div>
                     </div>
                     <div class="textfild">
-                        <label for="senha">Confirmar Senha</label>
-                        <input type="password" name="senha"  id="confirmPassword" placeholder="Senha">
+                        <label for="confirmPassword">Confirmar Senha</label>
+                        <input type="password" name="senha" id="confirmPassword" placeholder="Repita sua senha">
                         <div id="passwordMatch" class="status password-match"></div>
                     </div>
                     <button class="btn_cadastro" id="registerBtn">Cadastrar</button>
                     
-                      <div class="links">
+                    <div class="links">
                         Já tem uma conta? <a href="../login/login.html">Possuo cadastro</a>
                     </div>
                 </div>

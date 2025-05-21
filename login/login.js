@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simulando autenticação bem-sucedida
             console.log('Tentativa de login:', { username, password });
            
-             window.location.href = '../principal/index.html';
+             window.location.href = '../main/main.html';
             alert('Login realizado com sucesso!');
             // Redirecionar para a página principal
             // window.location.href = '/dashboard';

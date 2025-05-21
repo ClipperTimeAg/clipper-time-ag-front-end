@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./perfil.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="../img/logo.webp" alt="Logo"></div>
+    <nav>
+      <a href="../main/main.html">Início</a>
+      <a href="#">Busca</a>
+      <a href="#" class="active">Perfil</a>
+    </nav>
+    <button class="entrar">Entrar</button>
+  </header>
+
+  <main class="dashboard">
+    <div class="main-container">
+      <section class="main-content">
+        <div class="user-info">
+          <img src="../img/Barbearia.PNG" class="user-avatar" alt="Foto do usuário"/>
+          <h2>Olá, Guilherme</h2>
+          
+          <div class="user-stats">
+            <div class="stat-item">
+              <div class="stat-number">24</div>
+              <div class="stat-label">Agendamentos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">8</div>
+              <div class="stat-label">Favoritos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15</div>
+              <div class="stat-label">Avaliações</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" class="Pesquisa" placeholder="Pesquisar barbearias, serviços..." />
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <h3><i class="far fa-calendar-alt"></i> Agendamentos Pendentes</h3>
+          </div>
+          <div class="card">
+            <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia X" />
+            <div class="card-content">
+              <h4>Barbearia X</h4>
+              <p>Barba - Pezinho • 15/06/2025 • 14:30</p>
+            </div>
+            <button><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <hr/>
+
+        <div class="section">
+          <div class="section-header">
+            <h3><i class="far fa-clock"></i> Últimos agendamentos</h3>
+            <button class="edit-btn">Ver tudo</button>
+          </div>
+          <div class="card-list">
+            <div class="card">
+              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia Y" />
+              <div class="card-content">
+                <h4>Barbearia Y</h4>
+                <p>Barba - Pezinho • 15/06/2025 • 14:30</p>
+              </div>
+              <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="card">
+              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia Z" />
+              <div class="card-content">
+                <h4>Barbearia Z</h4>
+                <p>Corte social - Sombrancelha • 15/06/2025 • 14:30</p>
+              </div>
+              <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="card">
+              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia W" />
+              <div class="card-content">
+                <h4>Barbearia W</h4>
+                <p>corte social • 15/06/2025 • 14:30</p>
+              </div>
+              <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./perfil.js"></script>
+</body>
+</html>

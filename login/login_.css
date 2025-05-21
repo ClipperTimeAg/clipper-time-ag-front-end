@@ -1,154 +1,248 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-margin: 0;
-background-color: #000;
-font-family: "Noto Sans", sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.main_login{
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #151515
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: "Noto Sans", sans-serif;
+    min-height: 100vh;
 }
 
-.teste{
-    width: 50%;
-    height: 60%;
+.main_login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 1000px;
     background-color: #1c1c1c;
     border-radius: 20px;
-    box-shadow:0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #00000056;
     display: flex;
-    align-items: center;
     flex-direction: row;
+    overflow: hidden;
 }
 
-.left_login{
+.left_login {
     color: #59A9F4;
-    width: 50vw;
-    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #1a1a1a;
+}
+
+.left_login > h1 {
+    font-size: 2.5rem;
+    color: #59A9F4;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.left_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right_login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.card_login {
+    width: 100%;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.left-login > h1{
-    font-size: 15vw;
-    color: #77ffc0;
-}
-
-.left_img{
-    width: 15vw;
-}
-
-.right_login{
-width: 50vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.card_login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    
-}
-
-.card_login > h1{
+.card_login > h1 {
     color: #59A9F4;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 30px 0;
+    font-size: 2rem;
 }
 
-
-
-.textfild{
+.textfild {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px 0px;
+    margin-bottom: 20px;
 }
 
-.textfild > input{
+.textfild > label {
+    color: #f0ffffde;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.textfild > input {
     width: 100%;
     border: none;
     border-radius: 10px;
     padding: 15px;
     background: #f8f8ff;
     color: #000;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px  #00000056;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px #00000056;
     outline: none;
-    box-sizing: border-box;
+    transition: box-shadow 0.3s;
 }
 
-.textfild{
-    color: #f0ffffde;
-    margin-bottom: 10px;
+.textfild > input:focus {
+    box-shadow: 0px 0px 10px rgba(89, 169, 244, 0.5);
 }
 
-.textfild > input::placeholder{
+.textfild > input::placeholder {
     color: #00000056;
 }
 
-.btn_login{
+.btn_login {
     width: 100%;
-    padding: 10px 0px;
-    margin: 25px;
+    padding: 15px;
+    margin: 20px 0;
     border: none;
     border-radius: 8px;
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     color: #000;
     background: #59A9F4;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #0084ff52;
+    box-shadow: 0px 4px 15px -5px #0084ff52;
+    font-size: 14px;
+    transition: all 0.3s;
 }
 
 .btn_login:hover {
     background-color: #3367d6;
+    transform: translateY(-2px);
+}
+
+.social-login {
+    width: 100%;
+    margin: 20px 0;
 }
 
 .social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: white;
     cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-btn img {
-    width: 30px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
 
 .links {
     font-size: 14px;
-    color: #555;
+    color: #aaa;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .links a {
     color: #59A9F4;
     text-decoration: none;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 .links a:hover {
     text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .left_login, .right_login {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .left_login {
+        padding-bottom: 0;
+    }
+    
+    .left_login > h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .card_login > h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_login {
+        padding: 10px;
+    }
+    
+    .login-container {
+        border-radius: 15px;
+    }
+    
+    .left_login, .right_login {
+        padding: 25px;
+    }
+    
+    .left_login > h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card_login > h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn_login, .social-btn {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .textfild > input {
+        padding: 12px;
+    }
 }
