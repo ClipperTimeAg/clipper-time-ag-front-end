@@ -9,13 +9,15 @@
 </head>
 <body>
   <header>
-    <div class="logo"><img src="../img/logo.webp" alt="Logo Barbearia X"></div>
+    <div class="logo"><img src="../img/logo.webp" id="main_p" alt="Logo Barbearia X"></div>
     <nav>
       <a href="#" class="active">Início</a>
-      <a href="#">Busca</a>
       <a href="../Perfil/perfil.html">Perfil</a>
     </nav>
-    <button class="entrar">Entrar</button>
+    <div class="perfil botao_agendar">
+      <img src="../img/Guilherme.png" id="perfil" alt="Perfil"> 
+      <p> Guilherme </p>
+    </div>
   </header>
 
   <main>
@@ -39,10 +41,218 @@
             <a href="#">Produtos</a>
             <a href="#">Avaliações</a>
           </nav>
-
-          <div class="servicos">
-            <input type="text" placeholder="">
+         
+          <!-- Adicionando a seção de Comodidades -->
+          <div class="comodidades-section">
+            <h3 class="comodidades-title"><i class="fas fa-couch"></i> Comodidades</h3>
+            <div class="comodidades-buttons">
+              <button class="comodidade-btn">SOFÁ</button>
+              <button class="comodidade-btn">TV MULTICANAIS</button>
+              <button class="comodidade-btn">AREA INFANTIL</button>
+              <button class="comodidade-btn">WIFI</button>
+            </div>
           </div>
+          
+          <!-- Adicionando a seção de Serviços -->
+          <div class="servicos-section">
+            <h3><i class="fas fa-cut"></i> Serviços</h3>
+            <div class="servicos-grid">
+              <div class="servico-card">
+                <h4>Corte de Cabelo</h4>
+                <p>Estilo personalizado com as últimas tendências</p>
+              </div>
+              <div class="servico-card">
+                <h4>Barba</h4>
+                <p>Modelagem e tratamento completo para barba</p>
+              </div>
+              <div class="servico-card">
+                <h4>Corte + Barba</h4>
+                <p>Pacote completo para um visual renovado</p>
+              </div>
+              <div class="servico-card">
+                <h4>Pezinho</h4>
+                <p>Acabamento perfeito para o seu corte</p>
+              </div>
+              <div class="servico-card">
+                <h4>Sobrancelha</h4>
+                <p>Design e modelagem para realçar seu olhar</p>
+              </div>
+              <div class="servico-card">
+                <h4>Hidratação</h4>
+                <p>Tratamento capilar revitalizante</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adicionando a seção de Produtos -->
+          <div class="servicos-section">
+            <h3><i class="fas fa-store"></i> Produtos</h3>
+            <div class="servicos-grid">
+              <div class="servico-card">
+                <h4>Creme para Cabelo</h4>
+                <p>R$25,90</p>
+              </div>
+              <div class="servico-card">
+                <h4>Pentes - Escovas</h4>
+                <p>R$18,90</p>
+              </div>
+              <div class="servico-card">
+                <h4>Maquininhas</h4>
+                <p>R$67,90</p>
+              </div>
+              <div class="servico-card">
+                <h4>Toalhas de Rosto</h4>
+                <p>R$17,90</p>
+              </div>
+              <div class="servico-card">
+                <h4>Navalhas</h4>
+                <p>R$21,90</p>
+              </div>
+              <div class="servico-card">
+                <h4>Tinturas</h4>
+                <p>R$29,90</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Adicionando a seção de Profissionais -->
+          <div class="servicos-section">
+            <h3><i class="fas fa-user-tie"></i> Profissionais</h3>
+            <div class="servicos-grid">
+              <div class="servico-card">
+                <div class="proff">
+                    <img class="Profissional" src="../img/Anderson.png" alt="Profissional">
+                    <h4>Anderson</h4>
+                </div>
+                <div class="estrelas">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="servico-card">
+                <div class="proff">
+                    <img class="Profissional" src="../img/Daigo.png" alt="Profissional">
+                    <h4>Daigo</h4>
+                </div>
+                <div class="estrelas">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <div class="servico-card" >
+                <div class="proff">
+                    <img class="Profissional" src="../img/João.png" alt="Profissional">
+                    <h4>Joâo</h4>
+                </div>
+                <div class="estrelas">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <div class="servico-card">
+                <div class="proff">
+                    <img class="Profissional" src="../img/Reginaldo.png" alt="Profissional">
+                    <h4>Reginaldo</h4>
+                </div>
+                <div class="estrelas">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+              <div class="servico-card">
+                <div class="proff">
+                    <img class="Profissional" src="../img/Guilherme.png" alt="Profissional">
+                    <h4>Guilherme</h4>
+                </div>
+                <div class="estrelas">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>  
+            
+            <div class="avaliacoes-section">
+            <h3><i class="fas fa-star"></i> Avaliações</h3>
+            
+            <div class="avaliacao-card">
+              <div class="avaliacao-header">
+                <span class="avaliacao-cliente">Carlos Silva</span>
+                <span class="avaliacao-data">15/06/2023</span>
+              </div>
+              <div class="estrelas">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="avaliacao-texto">
+                Excelente atendimento! O profissional Anderson foi muito atencioso e fez exatamente o corte que eu queria. Ambiente limpo e organizado. Recomendo!
+              </p>
+            </div>
+            
+            <div class="avaliacao-card">
+              <div class="avaliacao-header">
+                <span class="avaliacao-cliente">Marcos Oliveira</span>
+                <span class="avaliacao-data">10/06/2023</span>
+              </div>
+              <div class="estrelas">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <p class="avaliacao-texto">
+                Ótimo serviço, mas a espera foi um pouco longa. O corte ficou perfeito, mas poderiam melhorar na pontualidade dos horários.
+              </p>
+            </div>
+            
+            <div class="avaliacao-card">
+              <div class="avaliacao-header">
+                <span class="avaliacao-cliente">Ricardo Santos</span>
+                <span class="avaliacao-data">05/06/2023</span>
+              </div>
+              <div class="estrelas">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="avaliacao-texto">
+                Ambiente muito agradável e profissionais qualificados. Fiz barba e corte, ficou impecável. Só achei os preços um pouco salgados.
+              </p>
+            </div>
+            
+            <!-- Formulário para nova avaliação -->
+            <div class="avaliar-form">
+              <h4>Deixe sua avaliação</h4>
+              <div class="rating-stars">
+                <i class="far fa-star" data-rating="1"></i>
+                <i class="far fa-star" data-rating="2"></i>
+                <i class="far fa-star" data-rating="3"></i>
+                <i class="far fa-star" data-rating="4"></i>
+                <i class="far fa-star" data-rating="5"></i>
+              </div>
+              <textarea placeholder="Conte sua experiência..."></textarea>
+              <button type="button" id="enviarAvaliacao">Enviar Avaliação</button>
+            </div>
+          </div>
+        </div>
         </div>
 
         <div class="right-panel">
@@ -141,6 +351,7 @@
     </div>
   </div>
 
-  <script src="./main.js"></script>
+  <script src="../main/main.js"></script>
 </body>
 </html>
+

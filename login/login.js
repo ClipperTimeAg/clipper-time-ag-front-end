@@ -77,4 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Primeiro acesso solicitado');
         window.location.href = '../cadastro/cadastro.html'; // Redireciona para a página de cadastro
     });
+    
 });

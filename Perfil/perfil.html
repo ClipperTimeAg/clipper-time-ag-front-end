@@ -7,22 +7,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="./perfil.css">
 </head>
+
 <body>
   <header>
-    <div class="logo"><img src="../img/logo.webp" alt="Logo"></div>
+    <div class="logo"><img src="../img/logo.webp" id="main_p" alt="Logo Barbearia X"></div>
     <nav>
       <a href="../main/main.html">Início</a>
-      <a href="#">Busca</a>
       <a href="#" class="active">Perfil</a>
     </nav>
-    <button class="entrar">Entrar</button>
+    <div class="perfil iconeUser">
+      <img src="../img/Guilherme.png" id="perfil" alt="Perfil"> 
+      <p> Guilherme </p>
+    </div>
   </header>
 
   <main class="dashboard">
     <div class="main-container">
       <section class="main-content">
         <div class="user-info">
-          <img src="../img/Barbearia.PNG" class="user-avatar" alt="Foto do usuário"/>
+          <img src="../img/Guilherme.png" class="user-avatar" alt="Foto do usuário"/>
           <h2>Olá, Guilherme</h2>
           
           <div class="user-stats">
@@ -51,7 +54,7 @@
             <h3><i class="far fa-calendar-alt"></i> Agendamentos Pendentes</h3>
           </div>
           <div class="card">
-            <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia X" />
+            <img src="../img/Barbearia.PNG" alt="Barbearia X" />
             <div class="card-content">
               <h4>Barbearia X</h4>
               <p>Barba - Pezinho • 15/06/2025 • 14:30</p>
@@ -69,25 +72,25 @@
           </div>
           <div class="card-list">
             <div class="card">
-              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia Y" />
+              <img src="https://i.imgur.com/KBRqIS8.png" alt="Barbearia Escobar" />
               <div class="card-content">
-                <h4>Barbearia Y</h4>
+                <h4>Barbearia Escobar</h4>
                 <p>Barba - Pezinho • 15/06/2025 • 14:30</p>
               </div>
               <button><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="card">
-              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia Z" />
+              <img src="https://i.imgur.com/qiiOguO.jpeg" alt="Barbearia Elite" />
               <div class="card-content">
-                <h4>Barbearia Z</h4>
+                <h4>Barbearia Elite</h4>
                 <p>Corte social - Sombrancelha • 15/06/2025 • 14:30</p>
               </div>
               <button><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="card">
-              <img src="https://i.imgur.com/CzzU7qV.png" alt="Barbearia W" />
+              <img src="https://marketplace.canva.com/EAGIHtM5teQ/1/0/1600w/canva-logo-barbearia-minimalista-amarelo-e-preto-chpUtuXnSRA.jpg" alt="Barbearia Borcelle" />
               <div class="card-content">
-                <h4>Barbearia W</h4>
+                <h4>Barbearia Borcelle</h4>
                 <p>corte social • 15/06/2025 • 14:30</p>
               </div>
               <button><i class="fas fa-chevron-right"></i></button>
@@ -95,9 +98,78 @@
           </div>
         </div>
       </section>
+      
     </div>
+    <div class="details-modal" id="detailsModal">
+    <div class="details-content">
+      <button class="close-details" id="closeDetailsBtn">&times;</button>
+      <div class="details-header">
+        <img src="" id="detailBarbeariaImg" alt="Barbearia">
+        <div>
+          <h3 class="details-title" id="detailBarbeariaNome">Barbearia X</h3>
+          <p class="details-subtitle" id="detailBarbeariaEndereco">Rua Exemplo, 123 - Centro</p>
+        </div>
+      </div>
+      
+      <div class="details-info">
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-calendar-day"></i></div>
+          <div class="info-content">
+            <div class="info-label">Data</div>
+            <div class="info-value" id="detailData">15/06/2025</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-content">
+            <div class="info-label">Horário</div>
+            <div class="info-value" id="detailHorario">14:30 - 15:30</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-cut"></i></div>
+          <div class="info-content">
+            <div class="info-label">Serviço</div>
+            <div class="info-value" id="detailServico">Corte + Barba</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="info-content">
+            <div class="info-label">Profissional</div>
+            <div class="info-value" id="detailProfissional">João Silva</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-money-bill-wave"></i></div>
+          <div class="info-content">
+            <div class="info-label">Valor</div>
+            <div class="info-value" id="detailValor">R$ 60,00</div>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+          <div class="info-content">
+            <div class="info-label">Status</div>
+            <div class="info-value" id="detailStatus">Confirmado</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="action-buttons">
+        <button class="action-btn primary-btn" id="confirmarBtn">Confirmar Presença</button>
+        <button class="action-btn secondary-btn" id="cancelarBtn">Cancelar Agendamento</button>
+      </div>
+    </div>
+  </div>
   </main>
 
   <script src="./perfil.js"></script>
 </body>
 </html>
+

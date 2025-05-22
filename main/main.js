@@ -1,9 +1,11 @@
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
       // Elementos do modal
       const modal = document.getElementById('agendamentoModal');
       const openModalBtn = document.getElementById('openModalBtn');
       const closeModalBtn = document.getElementById('closeModalBtn');
       const scheduleForm = document.getElementById('scheduleForm');
+      const perfil = document.getElementById('perfil');
+      
       
       // Abrir modal
       openModalBtn.addEventListener('click', function() {
@@ -106,4 +108,32 @@
         // Inicia o efeito após 1 segundo
         setTimeout(typeWriter, 1000);
       }
+
+      // Perfil
+      perfil.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Redirecionando para a página de perfil');
+        window.location.href = '../Perfil/perfil.html'; // Redireciona para a página de perfil
+      });
+
+      // Adicionando interação para os botões de comodidades
+      const comodidadeBtns = document.querySelectorAll('.comodidade-btn');
+      comodidadeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const comodidade = this.textContent;
+          
+          // Aqui você pode adicionar lógica adicional
+        });
+      });
+      
+      // Adicionando interação para os cards de serviços
+      const servicoCards = document.querySelectorAll('.servico-card');
+      servicoCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const servico = this.querySelector('h4').textContent;
+          
+          // Aqui você pode abrir o modal de agendamento já com o serviço selecionado
+        });
+      });
+      
     });
