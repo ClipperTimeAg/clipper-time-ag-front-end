@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           servico: 'Corte Social',
           profissional: 'Daigo',
           valor: 'R$ 35,00',
-          status: 'Confirmado'
+          status: 'Concluído'
         },
         'Barbearia Elite': {
           img: 'https://i.imgur.com/qiiOguO.jpeg',
