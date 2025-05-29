@@ -1,100 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Elementos do DOM
-    const fullNameInput = document.getElementById('fullName');
+    const nomeInput = document.getElementById('nome');
     const emailInput = document.getElementById('email');
-    const usernameInput = document.getElementById('username');
-    const usernameStatus = document.getElementById('usernameStatus');
-    const passwordInput = document.getElementById('password');
-    const passwordStrength = document.getElementById('passwordStrength');
-    const confirmPasswordInput = document.getElementById('confirmPassword');
-    const passwordMatch = document.getElementById('passwordMatch');
+    const telefoneInput = document.getElementById('telefone');
+    const senhaInput = document.getElementById('senha');
+    const confirmarSenhaInput = document.getElementById('confirmarSenha');
     const registerBtn = document.getElementById('registerBtn');
-
-    // Usernames já em uso (simulação)
-    const takenUsernames = ['@admin', '@teste', '@user123'];
-
-    // Verificar disponibilidade do username
-    usernameInput.addEventListener('input', function () {
-        const username = usernameInput.value.trim();
-
-        if (!username) {
-            usernameStatus.textContent = '';
-            return;
-        }
-
-        if (!username.startsWith('@')) {
-            usernameStatus.textContent = 'O nome de usuário deve começar com @';
-            usernameStatus.className = 'status unavailable';
-            return;
-        }
-
-        // Simulação de verificação de disponibilidade
-        setTimeout(() => {
-            if (takenUsernames.includes(username.toLowerCase())) {
-                usernameStatus.textContent = 'indisponível';
-                usernameStatus.className = 'status unavailable';
-            } else {
-                usernameStatus.textContent = 'disponível';
-                usernameStatus.className = 'status available';
-            }
-        }, 500);
-    });
-
-    // Verificar força da senha
-    passwordInput.addEventListener('input', function () {
-        const password = passwordInput.value;
-        let strength = '';
-
-        if (password.length === 0) {
-            passwordStrength.textContent = '';
-            return;
-        }
-
-        if (password.length < 6) {
-            strength = 'Muito fraca';
-        } else if (password.length < 8) {
-            strength = 'Fraca';
-        } else if (password.length < 10) {
-            strength = 'Média';
-        } else {
-            strength = 'Forte';
-        }
-
-        passwordStrength.textContent = `Força: ${strength}`;
-        checkPasswordMatch();
-    });
-
-    // Verificar se as senhas coincidem
-    confirmPasswordInput.addEventListener('input', checkPasswordMatch);
-
-    function checkPasswordMatch() {
-        const password = passwordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
-
-        if (password.length === 0 || confirmPassword.length === 0) {
-            passwordMatch.textContent = '';
-            return;
-        }
-
-        if (password === confirmPassword) {
-            passwordMatch.textContent = 'as senhas são iguais';
-            passwordMatch.className = 'status password-match';
-        } else {
-            passwordMatch.textContent = 'as senhas não coincidem';
-            passwordMatch.className = 'status password-mismatch';
-        }
-    }
 
     // Validar e enviar formulário
     registerBtn.addEventListener('click', function () {
-        const fullName = fullNameInput.value.trim();
+        const nome = nomeInput.value.trim();
         const email = emailInput.value.trim();
-        const username = usernameInput.value.trim();
-        const password = passwordInput.value;
-        const confirmPassword = confirmPasswordInput.value;
+        const telefone = telefoneInput.value.trim();
+        const senha = senhaInput.value;
+        const confirmarSenha = confirmarSenhaInput.value;
 
         // Validações
-        if (!fullName) {
+        if (!nome) {
             alert('Por favor, insira seu nome completo.');
             return;
         }
@@ -107,40 +29,59 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        if (!username) {
-            alert('Por favor, insira um nome de usuário.');
+        if (!telefone) {
+            alert('Por favor, insira seu telefone.');
             return;
-        } else if (!username.startsWith('@')) {
-            alert('O nome de usuário deve começar com @');
-            return;
-        } else if (takenUsernames.includes(username.toLowerCase())) {
-            alert('Este nome de usuário já está em uso.');
+        } else if (!/^\+?\d{8,15}$/.test(telefone)) { // valida telefone simples
+            alert('Por favor, insira um telefone válido.');
             return;
         }
 
-        if (!password) {
+        if (!senha) {
             alert('Por favor, crie uma senha.');
             return;
-        } else if (password.length < 6) {
+        } else if (senha.length < 6) {
             alert('A senha deve ter pelo menos 6 caracteres.');
             return;
         }
 
-        if (password !== confirmPassword) {
+        if (senha !== confirmarSenha) {
             alert('As senhas não coincidem.');
             return;
         }
 
-        // Simulação de cadastro bem-sucedido
-        alert('Cadastro realizado com sucesso!');
-        console.log('Dados do cadastro:', {
-            fullName,
+        // Dados para enviar
+        const data = {
+            nome,
             email,
-            username,
-            password
-        });
+            telefone,
+            senha
+        };
 
-        // Redirecionar para a página de login
-        window.location.href = 'login.html';
+        // Enviar os dados para o backend usando fetch
+        fetch('http://127.0.0.1:5000/cadastrar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // para indicar que vai enviar JSON
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(err => { 
+                    throw new Error(err.erro || 'Erro ao cadastrar usuário.');
+                });
+            }
+            return response.json();
+        })
+        .then(result => {
+            alert('Usuário cadastrado com sucesso!');
+            console.log('Resposta do backend:', result);
+            window.location.href = '../login/login.html';
+        })
+        .catch(error => {
+            alert('Erro no cadastro: ' + error.message);
+            console.error('Erro:', error);
+        });
     });
 });

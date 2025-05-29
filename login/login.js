@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
         
-        if (!username.startsWith('@')) {
-            alert('O nome de usuário deve começar com @');
-            return false;
-        }
+        // if (!username.startsWith('@')) {
+        //     alert('O nome de usuário deve começar com @');
+        //     return false;
+        // }
         
         return true;
     }
