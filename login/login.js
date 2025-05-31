@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
         
-        if (!username.startsWith('@')) {
-            alert('O nome de usuário deve começar com @');
-            return false;
-        }
+        // if (!username.startsWith('@')) {
+        //     alert('O nome de usuário deve começar com @');
+        //     return false;
+        // }
         
         return true;
     }
@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (validateLogin(username, password)) {
             // Simulando autenticação bem-sucedida
             console.log('Tentativa de login:', { username, password });
+           
+             window.location.href = '../main/main.html';
             alert('Login realizado com sucesso!');
             // Redirecionar para a página principal
             // window.location.href = '/dashboard';
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
     forgotPasswordLink.addEventListener('click', function(e) {
         e.preventDefault();
         console.log('Recuperação de senha solicitada');
-      window.location.href = './forgotPassword.html'; // Redireciona para uma página de recuperação de senha
+      window.location.href = '../forgotPassword/forgotPassword.html'; // Redireciona para uma página de recuperação de senha
     
     });
 
@@ -73,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     firstAccessLink.addEventListener('click', function(e) {
         e.preventDefault();
         console.log('Primeiro acesso solicitado');
-        window.location.href = './cadastro.html'; // Redireciona para a página de cadastro
+        window.location.href = '../cadastro/cadastro.html'; // Redireciona para a página de cadastro
     });
+    
 });

@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
-  <link rel="stylesheet" href="./cadastro.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <title>Cadastro</title>
 </head>
-
 <body>
-  <div class="register-container">
-    <h1>Nome completo</h1>
-    <div class="input-group">
-      <input type="text" id="fullName" placeholder="José Maria dos Santos">
+    <div class="main_cadastro">
+        <div class="container">
+            <div class="left_cadastro">
+                <!-- <h1>Faça seu Cadastro</h1> -->
+                <img class="left_img" src="../img/logo.webp" alt="logo" />
+            </div>
+
+            <div class="right_cadastro">
+                <div class="card_cadastro">
+                    <h1>Cadastro</h1>
+
+                    <div class="textfild">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" />
+                    </div>
+
+                    <div class="textfild">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu email" />
+                    </div>
+
+                    <div class="textfild">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone" />
+                    </div>
+
+                    <div class="textfild">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Crie uma senha" />
+                    </div>
+
+                    <div class="textfild">
+                        <label for="confirmarSenha">Confirmar Senha</label>
+                        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Repita sua senha" />
+                    </div>
+
+                    <button class="btn_cadastro" id="registerBtn">Cadastrar</button>
+
+                    <div class="links">
+                        Já tem uma conta? <a href="../login/login.html">Possuo cadastro</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <h1>Email</h1>
-    <div class="input-group">
-      <input type="email" id="email" placeholder="josemaria@gmail.com">
-    </div>
-
-    <h1>Nome de usuário</h1>
-    <div class="input-group">
-      <input type="text" id="username" placeholder="@josemaria">
-      <div id="usernameStatus" class="status available">disponível</div>
-    </div>
-
-    <h1>Criar senha</h1>
-    <div class="input-group">
-      <input type="password" id="password" placeholder="********">
-      <div id="passwordStrength" class="status"></div>
-    </div>
-
-    <h1>Confirmar senha</h1>
-    <div class="input-group">
-      <input type="password" id="confirmPassword" placeholder="********">
-      <div id="passwordMatch" class="status password-match">as senhas são iguais</div>
-    </div>
-
-    <div class="divider"></div>
-
-    <button class="register-btn" id="registerBtn">Cadastrar</button>
-
-    <div class="login-link">
-      Já tem uma conta? <a href="login.html">Possuo cadastro</a>
-    </div>
-  </div>
-  <script src="./cadastro.js"></script>
+    <script src="./cadastro.js"></script>
 </body>
-
 </html>

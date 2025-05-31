@@ -1,123 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-margin: 0;
-font-family: "Noto Sans", sans-serif;
+        
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.main_login{
-width: 100vw;
-height: 100vh;
-background: #f0ffffde;
-display: flex;
-justify-content: center;
-align-items: center;
+body {
+    margin: 0;
+    background-color: #121212;
+    font-family: "Noto Sans", sans-serif;
+    min-height: 100vh;
 }
 
-.teste{
-    width: 50%;
-    height: 98%;
+.main_cadastro {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
     background-color: #151515;
     border-radius: 20px;
-    box-shadow:0px 10px 40px #00000056;
+    box-shadow: 0px 10px 40px #00000056;
     display: flex;
-    align-items:flex-start;
-    justify-content: end;
-    flex-direction: column;
+    flex-direction: row;
+    overflow: hidden;
 }
 
-.left_login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.left_img{
-    width: 5vw;
-}
-
-.right_login{
-width: 50vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.card_login{
-    width: 60%;
+.left_cadastro {
+    color: #59A9F4;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px;
-    
+    padding: 40px;
+    background-color: #1a1a1a;
 }
 
-.card_login > h1{
+.left_cadastro > h1 {
+    font-size: 2.5rem;
+    color: #59A9F4;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.left_img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.right_cadastro {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.card_cadastro {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card_cadastro > h1 {
     color: #59A9F4;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 20px 0;
+    text-align: center;
 }
 
-
-
-.textfild{
+.textfild {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px 0px;
+    margin-bottom: 15px;
 }
 
-.textfild > input{
+.textfild > label {
+    color: #f0ffffde;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.textfild > input {
     width: 100%;
     border: none;
     border-radius: 10px;
     padding: 15px;
     background: #f0ffffde;
     color: #000;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px  #00000056;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px #00000056;
     outline: none;
-    box-sizing: border-box;
 }
 
-.textfild{
-    color: #f0ffffde;
-    margin-bottom: 10px;
-}
-
-.textfild > input::placeholder{
+.textfild > input::placeholder {
     color: #00000056;
+    font-size: 14px;
 }
 
-.btn_cadastro{
+.btn_cadastro {
     width: 100%;
-    padding: 10px 0px;
-    margin: 25px;
+    padding: 15px 0px;
+    margin: 20px 0;
     border: none;
     border-radius: 8px;
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     color: #000;
     background: #59A9F4;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #0004ff52;
+    box-shadow: 0px 4px 15px -5px #0004ff52;
+    font-size: 14px;
+    transition: background-color 0.3s;
 }
 
 .btn_cadastro:hover {
     background-color: #3367d6;
 }
 
-.links{
+.links {
     color: #f0ffffde;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
 }
+
 .links a {
     color: #4285f4;
     text-decoration: none;
@@ -126,23 +150,67 @@ align-items: center;
 .links a:hover {
     text-decoration: underline;
 }
+
 .status {
     font-size: 12px;
     margin-top: 5px;
-    color:#28a745;
-  }
+}
 
-  .available {
+.available {
     color: #28a745;
-  }
-  .unavailable {
-    color: #dc3545;
-  }
+}
 
-  .password-match {
+.unavailable {
+    color: #dc3545;
+}
+
+.password-match {
     color: #28a745;
-  }
+}
 
-  .password-mismatch {
+.password-mismatch {
     color: #dc3545;
-  }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left_cadastro, .right_cadastro {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .left_cadastro {
+        padding-bottom: 0;
+    }
+    
+    .left_img {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main_cadastro {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 15px;
+    }
+    
+    .left_cadastro, .right_cadastro {
+        padding: 20px;
+    }
+    
+    .card_cadastro {
+        padding: 15px 0;
+    }
+    
+    .btn_cadastro {
+        padding: 12px 0;
+        font-size: 13px;
+    }
+}
