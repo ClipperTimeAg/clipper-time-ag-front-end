@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(result => {
             alert('Usuário cadastrado com sucesso!');
             console.log('Resposta do backend:', result);
-            window.location.href = '../login/login.html';
+            window.location.href = '../login/index.html';
         })
         .catch(error => {
             alert('Erro no cadastro: ' + error.message);
